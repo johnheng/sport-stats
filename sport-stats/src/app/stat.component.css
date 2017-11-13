@@ -1,3 +1,13 @@
-.mat-card {
-    margin: 10px;
+.button-control {
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
 }
+
+.button-delete {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+.mat-card { min-height: 50px;}
