@@ -1,1 +1,12 @@
-<stat *ngFor="let stat of stats; let index = index" [stat]="stat"></stat>
+<div *ngIf="stats.length > 0">
+    <stat 
+        (delete)="onStatDelete($event)" 
+        *ngFor="let stat of stats; let index = index" 
+        [stat]="stat">
+    </stat>
+</div>
+<div *ngIf="!(stats.length > 0)">
+    <mat-card>
+      <mat-card-title>No stats yet.</mat-card-title>
+    </mat-card>
+</div>

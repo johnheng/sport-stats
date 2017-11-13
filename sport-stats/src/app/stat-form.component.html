@@ -1,0 +1,16 @@
+<mat-card>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit(form.value)">
+        <mat-card-title>Add new stat</mat-card-title>
+        <mat-form-field>
+          <input matInput placeholder="Stat Name" formControlName="text">
+        </mat-form-field>
+    
+        <!-- <button [disabled]="!form.valid" type="submit" mat-button>
+          Add
+        </button> -->
+
+        <button mat-icon-button [disabled]="!form.valid" type="submit"><mat-icon>note_add</mat-icon></button>
+    </form>
+</mat-card>
