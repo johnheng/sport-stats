@@ -27,7 +27,11 @@ export class StatComponent {
     this.delete.emit(this.stat);
   }
 
-  onEdit(value) {
+  onEdit(value: string) {
+    if(this.stat.text !== value)
+    {
+      this.edit.emit(value);
+    }
     this.statService.edit(this.stat, value);
   }
 

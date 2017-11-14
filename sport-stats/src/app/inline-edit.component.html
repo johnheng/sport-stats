@@ -1,7 +1,7 @@
 <div>
   <div *ngIf="editing">
     <mat-form-field>
-      <input #inlineEditControl (blur)="onBlur($event)" [value]="stat.text" matInput />
+      <input #inlineEditControl (blur)="onBlur($event)" (keyup.enter)="onBlur($event)" [value]="stat.text" matInput />
     </mat-form-field>
   </div>
   <div *ngIf="!editing">
