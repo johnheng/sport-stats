@@ -8,8 +8,9 @@ import { StatFormComponent } from './stat-form.component';
 import { MatCardModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatInputModule, MatButtonModule, MatSnackBarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StatService } from './stat.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatIconModule, MatIconRegistry} from '@angular/material';
+import { InlineEditComponent } from './inline-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatIconModule, MatIconRegistry} from '@angular/material';
     StatComponent,
     StatListComponent,
     StatFormComponent,
+    InlineEditComponent
   ],
   imports: [
     BrowserModule, 
@@ -29,7 +31,8 @@ import {MatIconModule, MatIconRegistry} from '@angular/material';
     MatButtonModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [ StatService, MatIconRegistry ],
   bootstrap: [AppComponent]

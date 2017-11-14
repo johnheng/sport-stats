@@ -26,6 +26,10 @@ export class StatComponent {
     this.delete.emit(this.stat);
   }
 
+  onEdit() {
+    
+  }
+
   increment() {
     this.stat.value++;
   }

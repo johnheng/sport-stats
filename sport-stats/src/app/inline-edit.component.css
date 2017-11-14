@@ -1,0 +1,27 @@
+input { font-size: 24px; font-weight: 400; } 
+
+.mat-form-field /deep/.mat-input-infix {
+  border: none;
+  padding: 0;
+}
+
+.mat-form-field /deep/.mat-input-wrapper {
+  margin-top:1px;
+}
+
+.mat-form-field /deep/.mat-input-underline {
+  bottom: initial;
+}
+
+.inline-edit {
+  font-weight: 400px;
+  font-size: 24px;
+}
+.edit-line
+{
+  background-image: linear-gradient(to right,rgba(0,0,0,.42) 0,rgba(0,0,0,.42) 33%,transparent 0);
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+  width: 180px;
+}

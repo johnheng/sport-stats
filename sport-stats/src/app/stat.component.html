@@ -1,5 +1,6 @@
 <mat-card>
-    <mat-card-title>{{stat.text}}</mat-card-title>
+    <!-- <mat-card-title>{{stat.text}}</mat-card-title> -->
+    <inline-edit [text]="stat.text" [required]="true"></inline-edit>
     <mat-card-subtitle [ngStyle]="{'visibility': stat.value != 0 ? 'initial' : 'hidden'}">{{stat.value}}</mat-card-subtitle>
     <button class="button-delete" mat-icon-button (click)="onDelete()"><mat-icon>close</mat-icon></button>
     <div class="button-control">
