@@ -1,14 +1,11 @@
 <div>
   <div *ngIf="editing">
     <mat-form-field>
-      <!-- <input matInput placeholder="Stat Name" formControlName="text"> -->
-      <!-- <input  [required]="required"  /> -->
-      <input #inlineEditControl (blur)="onBlur($event)" [value]="text" matInput />
+      <input #inlineEditControl (blur)="onBlur($event)" [value]="stat.text" matInput />
     </mat-form-field>
   </div>
   <div *ngIf="!editing">
-    <!-- <mat-card-title title="Click to edit" (click)="edit(text)" (focus)="edit(text);" tabindex="0" class="inline-edit">{{text}}</mat-card-title> -->
-    <div (click)="edit(text)" (focus)="edit(text);" tabindex="0" class="inline-edit">{{text}}</div>
+    <div (click)="edit(text)" (focus)="edit(text);" tabindex="0" class="inline-edit">{{stat.text}}</div>
     <div class="edit-line"></div>
   </div>
 </div>

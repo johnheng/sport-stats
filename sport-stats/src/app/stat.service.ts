@@ -15,6 +15,13 @@ export class StatService {
   add(stat: Stat) {
     this.stats.push(stat);
   }
+
+  edit(stat: Stat, newText: string) {
+    //could i use a map function to make this less wordy?
+    let statItem = this.stats.find(x => x.text === stat.text);
+    let index = this.stats.indexOf(statItem);
+    this.stats[index].text = newText;
+  }
   
   delete(stat: Stat) {
     let statItem = this.stats.find(x => x.text === stat.text);
