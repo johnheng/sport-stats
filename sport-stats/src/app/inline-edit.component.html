@@ -1,0 +1,11 @@
+<div>
+  <div *ngIf="editing">
+    <mat-form-field>
+      <input #inlineEditControl (blur)="onBlur($event)" (keyup.enter)="onBlur($event)" [value]="stat.text" matInput />
+    </mat-form-field>
+  </div>
+  <div *ngIf="!editing">
+    <div (click)="edit(text)" (focus)="edit(text);" tabindex="0" class="inline-edit">{{stat.text}}</div>
+    <div class="edit-line"></div>
+  </div>
+</div>

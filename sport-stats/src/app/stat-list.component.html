@@ -1,6 +1,7 @@
 <div *ngIf="stats.length > 0">
     <stat 
         (delete)="onStatDelete($event)" 
+        (edit)="onStatEdit($event)"
         *ngFor="let stat of stats; let index = index" 
         [stat]="stat">
     </stat>

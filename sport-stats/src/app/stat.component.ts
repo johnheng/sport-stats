@@ -16,6 +16,7 @@ export class StatComponent {
   title = 'app';
   @Input() stat: Stat;
   @Output() delete = new EventEmitter();
+  @Output() edit = new EventEmitter();
 
   ngOnInit() {
     this.stat.value = 0;
@@ -24,6 +25,14 @@ export class StatComponent {
   onDelete() {
     console.log(this.stat);
     this.delete.emit(this.stat);
+  }
+
+  onEdit(value: string) {
+    if(this.stat.text !== value)
+    {
+      this.edit.emit(value);
+    }
+    this.statService.edit(this.stat, value);
   }
 
   increment() {

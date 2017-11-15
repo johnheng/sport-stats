@@ -25,6 +25,12 @@ export class StatListComponent {
         this.getStats();
     }
 
+    onStatEdit(value) {
+        this.snackBar.open("Successfully updated '" + value + "'.", null, {
+            duration: 1000,
+        });  
+    }
+
     getStats() {
         this.stats = this.statService.get();
     }
